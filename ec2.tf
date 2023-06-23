@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  ami           = ""
+  ami           = "ami-022e1a32d3f742bd8"
   instance_type = "t2.micro"
   key_name = "TF_key"
   subnet_id = aws_subnet.public[count.index].id
@@ -18,7 +18,7 @@ resource "tls_private_key" "rsa" {
 }
 
 resource "aws_instance" "db" {
-  ami           = ""
+  ami           = "ami-022e1a32d3f742bd8"
   instance_type = "t2.micro"
   key_name = "TF_key"
   subnet_id = aws_subnet.private.id
