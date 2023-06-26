@@ -1,5 +1,5 @@
 resource "aws_lb" "alb" {
-  name               = "test-lb-tf"
+  name               = "test-my-lb-tf"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.allow_tls.id]
@@ -13,7 +13,7 @@ resource "aws_lb" "alb" {
 }
 
 //Target Group
-resource "aws_lb_target_group" "albtg" {
+resource "aws_my-lb_target_group" "albtg" {
   name     = "tf-example-lb-tg"
   port     = 80
   protocol = "HTTP"
